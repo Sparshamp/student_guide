@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERESTS</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <div id="head">
+        <header>
+            <h3>Student Guide</h3>
+            <br/>
+            <br/>
+        </header>
+        <nav>
+        <a href="pro_main.html">HOME</a>
+                <a href="#">SELECT COURSE
+                  <div class="dropdown-container">
+                      <form>
+                          <select id="courseSelect" onchange="navigateToCourse()">
+                              <option value="" selected disabled>Select option</option>
+                              <option value="class5_10.html">Class 5-10</option>
+                              <option value="diploma.html">Diploma</option>
+                              <option value="puc.html">PUC</option>
+                              <option value="ug_courses.html">UG Courses</option>
+                              <option value="competitive_exams.html">Competitive Exams</option>
+                          </select>
+                      </form>
+                  </div>
+              </a>
+        <a href="pro_interests.html">INTERESTS</a>
+        <a href="pro_help.html">HELP</a>
+        </nav>
+        </div>
+
+        <div id="studyDropdown">
+        <form>
+            <label for="studyClass">What class are you studying in?</label>
+            <select id="studyClass" onchange="loadPageInIframe('studyClass')">
+                <option value="" selected disabled>Select option</option>
+                <option value="I(5-10).html">Class 5-10</option>
+                <option value="I-diploma.html">Diploma</option>
+                <option value="I-pu.html">PU</option>
+                <option value="I-ug-courses.html">UG Courses</option>
+            </select>
+        </form>
+    </div>
+
+    <iframe id="contentFrame" src="" style="width:100%; height:500px; border:none; margin-top: 20px;" onload="toggleStudyDropdown()"></iframe>
+        
+        <script>
+            function navigateToCourse() {
+                const courseDropdown = document.getElementById("courseSelect");
+                const selectedOption = courseDropdown.value;
+                console.log(selectedOption);
+                if (selectedOption) {
+                    window.location.href = selectedOption;
+                }
+            }
+
+            function loadPageInIframe(selectId) {
+            const selectElement = document.getElementById(selectId);
+            const selectedPage = selectElement.value;
+            const iframe = document.getElementById("contentFrame");
+
+            if (selectedPage) {
+                // Load the selected page into the iframe
+                iframe.src = selectedPage;
+
+                // Reset the dropdown to prompt for a new selection next time
+                selectElement.selectedIndex = 0;
+            }
+        }
+
+        function toggleStudyDropdown() {
+            const iframe = document.getElementById("contentFrame");
+            const studyDropdown = document.getElementById("studyDropdown");
+
+            // Hide the study dropdown if the iframe has a loaded source
+            studyDropdown.style.display = iframe.src ? "none" : "block";
+        }
+          </script>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Student Guide</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <div id="head">
+        <header>
+            <h3>Student Guide</h3>
+        </header>
+        <nav>
+            <a href="pro_main.html">HOME</a>
+
+            <a href="#">SELECT COURSE
+                <div class="dropdown-container">
+                    <form>
+                        <select id="courseSelect" onchange="loadPageInIframe('courseSelect')">
+                            <option value="" selected disabled>Select option</option>
+                            <option value="class5_10.html">Class 5-10</option>
+                            <option value="diploma.html">Diploma</option>
+                            <option value="pu.html">PU-Science</option>
+                            <option value="ug_courses.html">UG Courses</option>
+                            <option value="competitive_exams.html">Competitive Exams</option>
+                        </select>
+                    </form>
+                </div>
+            </a>
+
+            <a href="pro_interests.html">INTERESTS</a>
+            <a href="pro_help.html">HELP</a>
+        </nav>
+    </div>
+
+    <div id="studyDropdown" class="dropdown-container">
+        <form>
+            <label for="studyClass">What class are you studying in?</label>
+            <select id="studyClass" onchange="loadPageInIframe('studyClass')">
+                <option value="" selected disabled>Select option</option>
+                <option value="I(5-10).html">Class 5-10</option>
+                <option value="I-diploma.html">Diploma</option>
+                <option value="I-pu.html">PU</option>
+                <option value="I-ug-courses.html">UG Courses</option>
+            </select>
+        </form>
+    </div>
+
+    <iframe id="contentFrame" src="" style="width:100%; height:500px; border:none; margin-top: 20px;" onload="toggleStudyDropdown()"></iframe>
+
+    <script>
+        function loadPageInIframe(selectId) {
+            const selectElement = document.getElementById(selectId);
+            const selectedPage = selectElement.value;
+            const iframe = document.getElementById("contentFrame");
+
+            if (selectedPage) {
+                // Load the selected page into the iframe
+                iframe.src = selectedPage;
+
+                // Reset the dropdown to prompt for a new selection next time
+                selectElement.selectedIndex = 0;
+            }
+        }
+
+        function toggleStudyDropdown() {
+            const iframe = document.getElementById("contentFrame");
+            const studyDropdown = document.getElementById("studyDropdown");
+
+            // Hide the study dropdown if the iframe has a loaded source
+            studyDropdown.style.display = iframe.src ? "none" : "block";
+        }
+    </script>
+</body>
+</html> -->

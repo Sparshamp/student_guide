@@ -1,0 +1,265 @@
+/* pdashboard1.css */
+
+/* General Layout and Body */
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #F7FAFC;
+  color: #2D3748;
+  font-family: sans-serif; /* Add a default font family for better readability */
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #2B6CB0;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.navbar-link {
+  border-bottom: 2px solid #38A169;
+  color: #F7FAFC;
+  text-decoration: none;
+  padding-bottom: 0.25rem; /* Add some padding to the bottom border */
+}
+
+.navbar-link:hover {
+  color: #F7FAFC; /* Keep text color white on hover */
+  border-bottom-color: #50C878; /* Slightly lighter green on hover */
+}
+
+
+/* Dashboard Content Area */
+.dashboard-content {
+  padding: 1.5rem;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column; /* Stack main content and sidebar vertically on smaller screens */
+}
+
+@media (min-width: 768px) { /* Medium screens and up */
+  .dashboard-content {
+    flex-direction: row; /* Display main content and sidebar horizontally on larger screens */
+  }
+}
+
+
+/* Main Content - Records Grid */
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.records-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) { /* Medium screens and up */
+  .records-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) { /* Large screens and up */
+  .records-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Record Card */
+.record-card {
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+  transition-property: box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  background-color: white; /* Ensure card background is white */
+  border-radius: 0.5rem; /* Slightly more rounded card corners */
+  overflow: hidden; /* Clip content to rounded corners */
+}
+
+.record-card:hover {
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.08);
+}
+
+.record-card > * { /* Apply padding to direct children of record-card */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.record-card > *:first-child { /* Remove top padding from the very first child (CardHeader) */
+  padding-top: 0;
+}
+
+.record-card > *:last-child { /* Remove bottom padding from the very last child (CardContent) */
+  padding-bottom: 1rem;
+}
+
+
+.record-header { /* In case you want to style CardHeader specifically */
+  padding-top: 1rem;
+}
+
+
+.record-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8rem;
+  background-color: #E2E8F0;
+  border-radius: 0.5rem 0.5rem 0 0; /* Rounded corners at the top of icon container */
+  margin-bottom: 0.5rem;
+  margin-left: -1rem; /* Adjust margin to align with card padding */
+  margin-right: -1rem;
+}
+
+.record-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #718096;
+}
+
+.record-title {
+  font-size: 1.125rem;
+  font-weight: 600; /* Make title slightly bolder */
+  margin-bottom: 0.25rem; /* Reduce space between title and date */
+  margin-top: 0.5rem; /* Add some space above the title */
+}
+
+.record-date {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-bottom: 1rem; /* Add some space below the date */
+}
+
+.record-encrypted-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem; /* Slightly wider badge */
+  border-radius: 0.375rem; /* More rounded badge */
+  background-color: #38A169;
+  color: #F7FAFC;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.record-content {
+  padding-top: 0; /* Remove default top padding from CardContent */
+}
+
+
+.record-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 1rem; /* Add padding above action buttons */
+  padding-bottom: 0; /* Remove bottom padding for actions container */
+  margin-bottom: 0; /* Ensure no extra margin below actions */
+}
+
+.record-action-button {
+  flex: 1;
+  padding: 0.6rem 1rem; /* Adjust button padding for better visual balance */
+  border-radius: 0.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  font-weight: 500; /* Slightly bolder button text */
+}
+
+.record-share-button {
+  background-color: #2B6CB0;
+}
+
+.record-share-button:hover {
+  background-color: #2B6CB0CC;
+}
+
+.record-delete-button {
+  background-color: #E53E3E;
+}
+
+.record-delete-button:hover {
+  background-color: #E53E3ECC;
+}
+
+.record-action-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+
+/* Sidebar - Quick Stats */
+.sidebar {
+  flex-basis: 300px; /* Fixed width for sidebar on larger screens */
+  min-width: 250px; /* Minimum width for sidebar */
+}
+
+.stats-card {
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.stats-card-header {
+  padding: 1.25rem;
+}
+
+.stats-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0; /* Remove default margin below title */
+}
+
+.stats-card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stat-item {
+  padding: 0.75rem 0; /* Add vertical padding to stat items */
+  border-bottom: 1px solid #E2E8F0; /* Separator between stats */
+}
+
+.stat-item:last-child {
+  border-bottom: none; /* Remove separator from last stat item */
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #718096;
+  margin-bottom: 0.25rem; /* Add a little space below the label */
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+}

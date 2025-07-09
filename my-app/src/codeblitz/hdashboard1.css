@@ -1,0 +1,234 @@
+/*body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F7FAFC;
+  color: #2D3748;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #2B6CB0;
+  color: #F7FAFC;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links a {
+  color: #F7FAFC;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.navbar-links a.active, .navbar-links a:hover {
+  background-color: #38A169;
+}
+
+.upload-button {
+  background-color: #E53E3E;
+  color: #F7FAFC;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #C53030;
+}
+
+.dashboard-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.search-card {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.search-input-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #E2E8F0;
+  border-radius: 5px;
+}
+
+.search-button {
+  background-color: #2B6CB0;
+  color: #F7FAFC;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #2A4365;
+}
+
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  padding: 16px;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+}
+
+.status-badge.pending {
+  background-color: #ECC94B;
+  color: #2D3748;
+}
+
+.status-badge.granted {
+  background-color: #38A169;
+  color: #F7FAFC;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button.request, .actions button.view {
+  background-color: #2B6CB0;
+  color: #F7FAFC;
+}
+
+.actions button.request:hover, .actions button.view:hover {
+  background-color: #2A4365;
+}
+
+.actions button.delete {
+  background-color: #E53E3E;
+  color: #F7FAFC;
+}
+
+.actions button.delete:hover {
+  background-color: #C53030;
+}
+*/
+
+.doctor-dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2a75bb;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.search-container input {
+  padding: 10px;
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.records-container {
+  margin-top: 20px;
+}
+
+.record-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.record-card h3 {
+  margin: 0;
+}
+
+.actions button {
+  margin-right: 5px;
+}
+
+.profile-section {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC Guide</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <style>
+        body{
+            padding: 20px;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+
+        }
+        p{
+            padding: 20px
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <header>
+            <h3>Student Guide</h3>
+            <br/>
+            <br/>
+        </header>
+        <nav>
+        <a href="pro_main.html">HOME</a>
+        <a href="#">SELECT COURSE
+            <div class="dropdown-container">
+                <form>
+                    <select id="courseSelect" onchange="navigateToCourse()">
+                        <option value="" selected disabled>Select option</option>
+                        <option value="class5_10.html">Class 5-10</option>
+                        <option value="diploma.html">Diploma</option>
+                        <option value="puc.html">PUC</option>
+                        <option value="ug_courses.html">UG Courses</option>
+                        <option value="competitive_exams.html">Competitive Exams</option>
+                    </select>
+                </form>
+            </div>
+        </a>
+  <a href="pro_interests.html">INTERESTS</a>
+  <a href="pro_help.html">HELP</a>
+  </nav>
+  </div>
+  <section>
+    <div>
+    <h3 id="info">Information</h3>
+    </div>
+    <div>
+    <p id="content">
+        The NMMS (National Means-cum-Merit Scholarship) exam is for students in Class 8 from economically weaker sections. It aims to provide financial assistance for continued education.
+        <strong>Eligibility:</strong>
+        <strong>Class:</strong> Must be in Class 8.
+        <strong>Income Limit:</strong> Family income ≤ ₹1.5 lakh/year.
+        <strong>Performance: </strong>Minimum 55% in Class 7 (50% for SC/ST).
+        <strong>Exam Structure:</strong>
+        <strong>Mental Ability Test (MAT):</strong> Assesses reasoning skills.
+        <strong>Scholastic Aptitude Test (SAT):</strong> Covers subjects like Maths, Science, and Social Science.
+        <strong>Scholarship:</strong>
+        <strong>Amount:</strong> ₹500–₹1,200 per month (varies by state).
+        <strong>Application:</strong>
+        Through the state education board, with necessary documents.
+    </p>
+    </div>
+    <h3>Main NMMS Website</h3>
+    <a href="https://www.education.gov.in/nmms" target="_blank" rel="noopener noreferrer">Main NMMS Website</a><br/>
+    <h3>Exam Pattern</h3>
+    <a href="https://rajshaladarpan.nic.in/SD3/NMMS/exampattern.aspx">Pattern</a>    
+    <h3>Syllabus</h3>
+    <a href="https://school.careers360.com/articles/nmms-syllabus" target="_blank">Website 1</a><br><br>
+    <a href="https://www.adda247.com/school/nmms-syllabus/?srsltid=AfmBOorGC2NBLDWDAYVJT2Rp3xo4tywqsoZb2RraLR-P1QuUk-FijycA" target="_blank">Website 2</a><br>
+    <h3>Previous year question papers</h3>
+    <a href="https://rajshaladarpan.nic.in/SD3/NMMS/questionpapers.aspx" target="_blank">Website 1</a><br><br>
+    <a href="https://www.adda247.com/school/nmms-question-paper/?srsltid=AfmBOopOsygntE5iJTzfhgkBqmkXkMZ6R6bvDJvsmyxK-x29Z0SflyoN" target="_blank">Website 2</a><br><br>
+    <a href="https://www.embibe.com/exams/nmms-sample-papers/" target="_blank">Website 3</a><br><br>
+    <h3>Mock test - Apps and links</h3>
+    <a href="https://www.rankersadda.in/course/view.php?id=53" target="_blank">Mock Test Website 1</a><br><br>
+    <a href="https://toppersexam.com/UNIVERSITY-BOARD-EXAMS/NMMS-CLASS-8/free-test_4697.html?srsltid=AfmBOopsGrv6vlmcWhhMWIWAVkJD1_HToCHHhqHK4dow26xRIkZSqKA6#" target="_blank">Mock Test Website 2</a><br><br>
+    <a href="https://mocktest.aglasem.com/exam/nmms" target="_blank">Mock Test Website 2</a>
+  </section>
+
+
+    <script>
+        function navigateToCourse() {
+            const courseDropdown = document.getElementById("courseSelect");
+            const selectedOption = courseDropdown.value;
+            console.log(selectedOption);
+            if (selectedOption) {
+                window.location.href = selectedOption;
+            }
+        }
+
+    </script>
+        
+</body>
+</html>
+
+
+

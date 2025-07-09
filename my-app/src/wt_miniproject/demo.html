@@ -1,0 +1,628 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Dropdown Example</title>
+  <style>
+    /* Basic container styling */
+    .dropdown-container {demo.html
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Hide the select box initially */
+    .dropdown-container select {
+      display: none;
+      position: absolute;
+      top: 100%; /* Makes the dropdown appear just below the element */
+      left: 0;
+      min-width: 200px;
+      z-index: 1; /* Ensure it's above other elements */
+    }
+
+    /* Show select on hover */
+    .dropdown-container:hover select {
+      display: block;
+    }
+
+    /* Optional styling for the select */
+    select {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="dropdown-container">
+  <button>Hover to Select</button>
+  <form>
+    <select>
+      <option value="" selected disabled>Select option</option>
+      <option>Class 5-10</option>
+      <option>Diploma</option>
+      <option>PU-Science</option>
+      <option>PU-Commerce</option>
+      <option>UG courses</option>
+      <option>Competitive Exams</option>
+    </select>
+  </form>
+</div>
+
+</body>
+</html>-->
+
+<!-- main.css
+body{
+    background-color: antiquewhite;
+}
+#head{
+    background-color:cornflowerblue;
+}
+nav a{
+    background-attachment: fixed;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
+nav a:hover{
+    color: rgb(25, 25, 170);
+}
+h3{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 100px;
+}
+a{
+    padding-inline: 10px;
+}
+p{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: larger;
+}
+     //Basic container styling 
+     .dropdown-container {
+        position: relative;
+        display: inline-block;
+      }
+
+    .dropdown-container select {
+        display: none;
+        position: absolute;
+        top: 100%; //Makes the dropdown appear just below the element 
+        left: 0;
+        min-width: 200px;
+        z-index: 1; Ensure it's above other elements 
+      }
+
+      .dropdown-container:hover select {
+        display: block;
+      }
+
+      select {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: white;
+        font-size: 14px;
+      }  -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header h3 {
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            position: relative; /* Needed for dropdown */
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown container initially hidden */
+        .dropdown-container {
+            display: none;
+            position: absolute;
+            top: 100%; /* Position dropdown below the link */
+            left: 0;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+            min-width: 200px;
+        }
+
+        /* Form inside dropdown */
+        .dropdown-container form {
+            margin: 0;
+            padding: 10px;
+        }
+
+        /* Show dropdown on hover */
+        a:hover .dropdown-container {
+            display: block;
+        }
+
+        /* Style the select dropdown */
+        select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        article {
+            padding: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <h3><marquee>Student Guide</marquee></h3>
+            <br/><br/>
+        </header>
+
+        <nav>
+            <a href="pro_main.html">HOME</a>
+            <a href="#">SELECT COURSE
+                <div class="dropdown-container">
+                    <form>
+                        <select>
+                            <option value="" selected disabled>Select option</option>
+                            <option>Class 5-10</option>
+                            <option>Diploma</option>
+                            <option>PU-Science</option>
+                            <option>PU-Commerce</option>
+                            <option>UG courses</option>
+                            <option>Competitive Exams</option>
+                        </select>
+                    </form>
+                </div>
+            </a>
+            <a href="pro_interests.html">INTERESTS</a>
+            <a href="pro_help.html">HELP</a>
+        </nav>
+    </div>
+
+    <article>
+        <br/><br/><br/>
+        <p>
+            A student guide website serves as a one-stop platform, much like a friendly senior, offering curated 
+            recommendations for essential websites, events, and resources every student should explore. It covers
+            everything from academic tools—such as research databases, online libraries, and course platforms—to 
+            career-building resources like internship portals, hackathons, and workshops. The site also highlights 
+            key extracurricular opportunities, including student festivals, field of interest. With reviews, how-to
+            articles, conferences, scholarships, and competitions, it ensures students make informed decisions, 
+            whether it’s choosing the best study materials or discovering networking opportunities.
+        </p>
+    </article>
+</body>
+</html> -->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Appointments</title>
+  <style>  
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 10px;
+      width: 300px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Apply this style only to the patient's name if the appointment is completed */
+    .completedName {
+      color: gray;
+      text-decoration: line-through;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .totalCompleted {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+ 
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState } = React;
+
+    const App = () => {
+      // State for appointment data
+      const [appointments, setAppointments] = useState([
+        { id: 1, name: 'John Doe', reason: 'Routine Checkup', date: '2024-08-05', status: 'scheduled' },
+        { id: 2, name: 'Jane Smith', reason: 'Consultation', date: '2024-08-06', status: 'scheduled' },
+        { id: 3, name: 'Mary Johnson', reason: 'Follow-up', date: '2024-08-07', status: 'scheduled' },
+      ]);
+
+      // Event handler to mark appointment as completed
+      const markAsCompleted = (id) => {
+        setAppointments(appointments.map(appointment => 
+          appointment.id === id ? { ...appointment, status: 'completed' } : appointment
+        ));
+      };
+
+      // Calculate the total completed appointments
+      const completedCount = appointments.filter(app => app.status === 'completed').length;
+
+      return (
+        <div>
+          <h1 className="header">Patient Appointments</h1>
+          {appointments.map(appointment => (
+            <div key={appointment.id} className="card">
+              <h2 className={appointment.status === 'completed' ? 'completedName' : ''}>
+                {appointment.name}
+              </h2>
+              <p> {appointment.reason}</p>
+              <p> {appointment.date}</p>
+              <p> Status: {appointment.status}</p>
+              {appointment.status === 'scheduled' && (
+                <button
+                  className="button"
+                  onClick={() => markAsCompleted(appointment.id)}
+                >
+                  Mark as Completed
+                </button>
+              )}
+            </div>
+          ))}
+          <div className="totalCompleted">
+            Total Completed Appointments: {completedCount}
+          </div>
+        </div>
+      );
+    };
+
+    // Render the App component
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>  -->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Redirect Example</title>
+</head>
+<body>
+
+    <h2>Select a Page or Section to Redirect</h2>
+    <select id="pageDropdown" onchange="redirectToPage()">
+        <option value="">Select an option</option>
+        <option value="https://example.com">Home</option>
+        <option value="https://example.com/about">About</option>
+        <option value="https://example.com#section1">Section 1</option>
+        <option value="https://example.com#section2">Section 2</option>
+    </select>
+
+    <script>
+        function redirectToPage() {
+            const dropdown = document.getElementById("pageDropdown");
+            const selectedValue = dropdown.value;
+
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+    </script>
+
+</body>
+</html>-->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        /* Hide all course sections by default */
+        .course-section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <header>
+            <h3>Student Guide</h3>
+            <br/>
+            <br/>
+        </header>
+        <nav>
+            <a href="pro_main.html">HOME</a>
+            <div class="dropdown-container">
+                <a href="#">SELECT COURSE</a>
+                <form>
+                    <select id="courseSelect" onchange="showCourseSection()">
+                        <option value="" selected disabled>Select option</option>
+                        <option value="class5-10">Class 5-10</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="puc-science">PU-Science</option>
+                        <option value="puc-commerce">PU-Commerce</option>
+                        <option value="ug-courses">UG Courses</option>
+                        <option value="competitive-exams">Competitive Exams</option>
+                    </select>
+                </form>
+            </div>
+            <a href="pro_interests.html">INTERESTS</a>
+            <a href="pro_help.html">HELP</a>
+        </nav>
+    </div>
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="doctor.jpg" class="d-block w-100" alt="Doctor">
+            </div>
+            <div class="carousel-item">
+                <img src="engg.jpg" class="d-block w-100" alt="Engineering">
+            </div>
+            <div class="carousel-item">
+                <img src="bsc.jpg" class="d-block w-100" alt="Bachelor of Science">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <article>
+        <p>
+            A student guide website serves as a one-stop platform, offering curated 
+            recommendations for essential websites, events, and resources every student should explore.
+        </p>
+    </article>
+
+    <section id="class5-10" class="course-section">
+        <h3>Class 5-10</h3>
+        <p>Information and resources for students in classes 5 through 10.</p>
+    </section>
+
+    <section id="diploma" class="course-section">
+        <h3>Diploma</h3>
+        <p>Resources and guidance for diploma students.</p>
+    </section>
+
+    <section id="puc-science" class="course-section">
+        <h3>PU-Science</h3>
+        <p>Details for students in PU Science courses.</p>
+    </section>
+
+    <section id="puc-commerce" class="course-section">
+        <h3>PU-Commerce</h3>
+        <p>Information for PU Commerce students.</p>
+    </section>
+
+    <section id="ug-courses" class="course-section">
+        <h3>UG Courses</h3>
+        <p>Guidance and resources for undergraduate courses.</p>
+    </section>
+
+    <section id="competitive-exams" class="course-section">
+        <h3>Competitive Exams</h3>
+        <p>Information and resources for preparing for competitive exams.</p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <script>
+        function showCourseSection() {
+            const courseDropdown = document.getElementById("courseSelect");
+            const selectedCourse = courseDropdown.value;
+
+            // Hide all course sections
+            document.querySelectorAll(".course-section").forEach(section => {
+                section.style.display = "none";
+            });
+
+            // Show the selected course section
+            if (selectedCourse) {
+                document.getElementById(selectedCourse).style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>-->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UG Guide</title>
+    <link rel="stylesheet" href="mainstyle.css">
+</head>
+<body>
+    <nav>
+        <a href="pro_main.html">HOME</a>
+        <a href="pro_course.html">SELECT COURSE</a>
+        <a href="pro_interests.html">INTERESTS</a>
+        <a href="pro_help.html">HELP</a>
+    </nav>
+   
+    <h1>Select Your UG Course</h1>
+    <div class="dropdown-container">
+        <form>
+            <select onchange="location = this.value;">
+                <option value="" selected disabled>Select UG Course</option>
+                <option value="pro_engineering.html">Engineering</option>
+                <option value="pro_medical.html">Medical</option>
+                <option value="pro_bca.html">BCA</option>
+            </select>
+        </form>
+    </div>
+    <article>
+        <h2>Overview of UG Courses</h2>
+        <p>
+            Undergraduate (UG) courses are programs that students pursue after completing their higher secondary education (12th grade).
+            These courses typically last for three to four years and provide students with foundational knowledge and skills in their chosen fields.
+            Below are brief descriptions of some popular UG courses:
+        </p>
+        <h2 >1. Engineering</h2>
+        <h3 >Bachelor of Engineering/Bachelor of Technology (BE/B.Tech)</h3>
+        <p>
+            BE/B.Tech is a foundational degree for engineering students, covering various disciplines of engineering.
+            This program prepares students for a wide range of careers in engineering and technology.
+        </p>
+
+
+        <h3>Key Features of BE/B.Tech</h3>
+        <ul>
+            <li>Course Duration: 4 years</li>
+            <li>Practical and Theoretical Learning</li>
+            <li>Internships and Projects</li>
+        </ul>
+        <p>
+            Engineering is a field that applies science and mathematics to solve problems and design innovative solutions.
+            It covers various branches, including Civil, Mechanical, Electrical, Electronics, and Computer Engineering.
+            Students will engage in theoretical knowledge and practical applications through projects and labs.
+        </p>
+        <h2>2. Medical</h2>
+            <h3>Bachelor of Medicine, Bachelor of Surgery (MBBS)</h3>
+            <p>The MBBS program is a primary medical degree for students aiming to become doctors. It provides extensive knowledge in medical science and practical experience in patient care, diagnosis, and treatment.</p>
+
+
+            <h4>Key Features of MBBS</h4>
+            <ul>
+                <li>Course Duration: 5.5 years (including a 1-year internship)</li>
+                <li>In-depth study of human anatomy, physiology, and pathology</li>
+                <li>Hands-on clinical experience and hospital internships</li>
+            </ul>
+
+
+            <p>Medical education prepares students for various healthcare careers, including roles as general practitioners, specialists, and surgeons. The curriculum emphasizes patient care, diagnostic skills, and ethical medical practices. The program combines classroom learning, laboratory work, and clinical rotations.</p>
+       
+            <h2>3. BCA (Bachelor of Computer Applications)</h2>
+            <p>The BCA program is designed for students interested in pursuing a career in software development, data analysis, and IT consulting. The course provides a strong foundation in computer science and programming.</p>
+
+
+            <h4>Key Features of BCA</h4>
+            <ul>
+                <li>Course Duration: 3 years</li>
+                <li>Focus on programming languages, database management, and web development</li>
+                <li>Opportunities for internships in software and IT companies</li>
+            </ul>
+
+
+            <p>BCA prepares students for entry-level roles in the IT industry and offers pathways to advanced studies in computer science. The curriculum includes subjects such as programming, data structures, database management, networking, and web development, along with practical lab sessions and projects.</p>
+       
+    </article>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+<script type = "text/babel">
+class My_component extends React.Component
+{ constructor()
+{ super(); this.state = {val:0} }
+render()
+{ alert("in render");
+return (<div>
+    <button onClick = {this.decrement}>-</button>
+<input type = "text" value = {this.state.val}/>
+<button onClick = {this.increment}>+</button>
+</div>)
+}
+increment=()=>
+{ this.setState({val: this.state.val+1} ) }
+decrement=()=>
+{ this.setState({val: this.state.val-1}) }
+}
+ReactDOM.render(<My_component/>,
+document.getElementById("root"))
+</script>
+</body>
+</html>

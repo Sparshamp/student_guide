@@ -1,0 +1,105 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.auth-card {
+  width: 350px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2B6CB0; /* Blue logo color */
+}
+
+.auth-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: #eee;
+}
+
+.tab-btn.active {
+  background-color: #2B6CB0;
+  color: #fff;
+}
+
+.auth-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #2B6CB0;
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #38A169;
+  color: #fff;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2e8b57;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.forgot-password a {
+  color: #2B6CB0;
+  text-decoration: underline;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC Guide</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <style>
+        body{
+            padding: 20px;
+        }
+        button{
+            padding: 10px;
+            margin: 10px;
+
+        }
+        p{
+            padding: 20px
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <header>
+            <h3>Student Guide</h3>
+            <br/>
+            <br/>
+        </header>
+        <nav>
+        <a href="pro_main.html">HOME</a>
+        <a href="#">SELECT COURSE
+            <div class="dropdown-container">
+                <form>
+                    <select id="courseSelect" onchange="navigateToCourse()">
+                        <option value="" selected disabled>Select option</option>
+                        <option value="class5_10.html">Class 5-10</option>
+                        <option value="diploma.html">Diploma</option>
+                        <option value="puc.html">PUC</option>
+                        <option value="ug_courses.html">UG Courses</option>
+                        <option value="competitive_exams.html">Competitive Exams</option>
+                    </select>
+                </form>
+            </div>
+        </a>
+  <a href="pro_interests.html">INTERESTS</a>
+  <a href="pro_help.html">HELP</a>
+  </nav>
+  </div>
+  <section>
+    <div>
+    <h3 id="info">Information</h3>
+    </div>
+    <div>
+    <p id="content">The Jawahar Navodaya Vidyalaya Selection Test (JNVST) is an entrance exam for admission to 
+        Jawahar Navodaya Vidyalayas which provide <strong><u>Free Residential Education</u></strong> from <strong>Class 6th to 
+        12th</strong> (if exams are taken in Class 5th) or from <strong>Class 10th to 12th</strong> (if the exams are taken in Class 9th)  : <br><br>
+        Purpose: The JNVST is a merit-based test to select talented children from rural areas for admission to Jawahar Navodaya Vidyalayas. <br><br>  
+        Subjects: The JNVST covers different subjects depending on the class for which admission is sought: <br>     
+        Class 6: Mental ability skills, mathematics, and regional language <br>     
+        Class 9: English, Hindi, mathematics, and general science <br><br>      
+        Format: The JNVST is an objective test. <br><br>
+        Frequency: The JNVST is held annually at the national, block, and district levels. <br><br>     
+        Eligibility: Candidates must meet the age criteria and pass the previous class. <br><br>       
+        Admission: Admission is based on merit, with reservations for students from rural areas, Scheduled Castes (SCs), Scheduled Tribes (STs), girls, and disabled candidates. <br><br>      
+        Examiner: The Central Board of Secondary Education (CBSE) designs, develops, and conducts the JNVST. <br><br>
+        </p>
+    </div>
+    <h3>Main JNV Website</h3>
+    <a href="https://navodaya.gov.in/nvs/en/Home1" target="_blank">Home</a>
+    <h3>Syllabus</h3>
+    <a href="https://www.adda247.com/school/jnv-syllabus/?srsltid=AfmBOop1nSj6k9XF1Fczy2iL8gCLszZ3e_xwa9jwbDQGXz3ytzAtjZcp" target="_blank">Website 1</a><br><br>
+    <a href="https://sainikschoolbhubaneswar.org/navodaya-jnvst-class-6-syllabus-pdf/" target="_blank">Website 2</a><br>
+    <h3>Previous year question papers</h3>
+    <a href="https://schools.aglasem.com/133831/" target="_blank">Website 1</a><br><br>
+    <a href="https://thedarshika.com/navodaya-previous-question-papers-pdf/#" target="_blank">Website 2</a><br><br>
+    <a href="https://www.selfstudys.com/scholarship-olympiad/navodaya-vidyalaya/exam/class-6th/previous-years-paper-pdf" target="_blank">Website 3</a><br><br>
+    <h3>Mock test - Apps and links</h3>
+    <a href="https://play.google.com/store/apps/details?id=com.sainikrmsnavodaya.classes" target="_blank">Kranthi keen app </a><br><br>
+    <a href="https://www.selfstudys.com/mcq/scholarship-olympiad/navodaya-vidyalaya/class-6th/mock-test" target="_blank">Mock test website 1</a><br><br>
+    <a href="https://navodayastudy.com/free-math-nonverbal-and-language-mock-test-for-all-entrance-exam-multi-language/" target="_blank">Mock test website 2</a>
+  </section>
+
+
+    <script>
+        function navigateToCourse() {
+            const courseDropdown = document.getElementById("courseSelect");
+            const selectedOption = courseDropdown.value;
+            console.log(selectedOption);
+            if (selectedOption) {
+                window.location.href = selectedOption;
+            }
+        }
+
+    </script>
+        
+</body>
+</html>

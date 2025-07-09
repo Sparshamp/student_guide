@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC Guide</title>
+    <link rel="stylesheet" href="mainstyle.css">
+    <style>
+        button{
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <header>
+            <h3>Student Guide</h3>
+            <br/>
+            <br/>
+        </header>
+        <nav>
+        <a href="pro_main.html">HOME</a>
+        <a href="#">SELECT COURSE
+            <div class="dropdown-container">
+                <form>
+                    <select id="courseSelect" onchange="navigateToCourse()">
+                        <option value="" selected disabled>Select option</option>
+                        <option value="class5_10.html">Class 5-10</option>
+                        <option value="diploma.html">Diploma</option>
+                        <option value="puc.html">PUC</option>
+                        <option value="ug_courses.html">UG Courses</option>
+                        <option value="competitive_exams.html">Competitive Exams</option>
+                    </select>
+                </form>
+            </div>
+        </a>
+  <a href="pro_interests.html">INTERESTS</a>
+  <a href="pro_help.html">HELP</a>
+  </nav>
+  </div>
+
+    <section>
+        <h3>School</h3>
+        <div class="course">
+            <button onclick="handleEvent('navodaya_5')">Navodaya for 5th</button>
+            <button onclick="handleEvent('nmms')">NMMS</button>
+            <button onclick="handleEvent('navodaya_9')">Navodaya for 9th</button>
+            <button onclick="handleEvent('ntse')">NTSE</button>
+            <button onclick="handleEvent('kvpy')">KVPY</button>
+            <button onclick="handleEvent('olympiad')">Olympiad</button>
+        </div>
+        <h3>PUC</h3>
+        <div class="course">
+            <button onclick="handleEvent('kcet')">KCET</button>
+            <button onclick="handleEvent('jee_mains')">JEE Mains</button>
+            <button onclick="handleEvent('jee_advanced')">JEE Advanced</button>
+            <button onclick="handleEvent('neet')">NEET</button>
+            <button onclick="handleEvent('kvpy')">KVPY</button>
+            <button onclick="handleEvent('olympiad')">Olympiad</button>
+            <button onclick="handleEvent('cuet')">CUET</button>
+            <button onclick="handleEvent('ca')">CA</button>
+            <button onclick="handleEvent('cpt')">CPT</button>
+            <button onclick="handleEvent('cma')">CMA</button>
+        </div>
+
+        <h3>UG courses</h3>
+        <div class="course">
+            <button onclick="handleEvent('pg_cet')">PG-CET</button>
+            <button onclick="handleEvent('kmat')">KMAT</button>
+            <button onclick="handleEvent('gate')">GATE</button>
+            <button onclick="handleEvent('kas')">KAS</button>
+            <button onclick="handleEvent('cat')">CAT</button>
+            <button onclick="handleEvent('mat')">MAT</button>
+            <button onclick="handleEvent('upsc')">UPSC</button>
+        </div>
+    </section>
+
+    <script>
+        function navigateToCourse() {
+            const courseDropdown = document.getElementById("courseSelect");
+            const selectedOption = courseDropdown.value;
+            console.log(selectedOption);
+            if (selectedOption) {
+                window.location.href = selectedOption;
+            }
+        }
+
+        function handleEvent(exam) {
+            const examUrls = {
+                navodaya_5: "navodaya_5th.html",
+                nmms: "nmms.html",
+                navodaya_9: "navodaya_9th.html",
+                ntse: "ntse.html",
+                kvpy: "kvpy.html",
+                olympiad: "olympiad.html",
+                kcet: "kcet.html",
+                jee_mains: "jee_mains.html",
+                jee_advanced: "jee_advanced.html",
+                neet: "neet.html",
+                cuet: "cuet.html",
+                ca: "ca.html",
+                cpt: "cpt.html",
+                cma: "cma.html",
+                pg_cet: "pg_cet.html",
+                kmat: "kmat.html",
+                gate: "gate.html",
+                kas: "kas.html",
+                cat: "cat.html",
+                mat: "mat.html",
+                upsc: "upsc.html"
+            };
+
+            const url = examUrls[exam];
+            if (url) {
+                window.location.href = url;
+            } else {
+                console.error("URL not found for exam:", exam);
+            }
+        }
+    </script>
+        
+</body>
+</html>
