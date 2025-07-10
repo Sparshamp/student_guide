@@ -2,6 +2,8 @@
 
 This is a React-based web application designed to serve as a student guide platform.
 
+Vercel-app link: https://student-guide-psi.vercel.app/
+
 📁 Project Structure
 my-app/
 ├── public/
